@@ -2,9 +2,9 @@ import { Post } from '../db/models/post.js'
 
 export async function createPost(userId, { title, contents, tags }) {
   const post = new Post({ title, author: userId, contents, tags })
-
   return await post.save()
 }
+
 async function listPosts(
   query = {},
 
@@ -31,7 +31,9 @@ export async function getPostById(postId) {
 export async function updatePost(userId, postId, { title, contents, tags }) {
   return await Post.findOneAndUpdate(
     { _id: postId, author: userId },
+
     { $set: { title, contents, tags } },
+
     { new: true },
   )
 }
