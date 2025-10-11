@@ -15,7 +15,7 @@ export function Login() {
       setToken(data.token)
       navigate('/')
     },
-    onError: () => alert('failed to login up!'),
+    onError: () => alert('failed to login!'),
   })
   const handleSubmit = (e) => {
     e.preventDefault()
