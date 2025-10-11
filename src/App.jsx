@@ -6,6 +6,16 @@ import { AuthContextProvider } from './contexts/AuthContext.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 const queryClient = new QueryClient()
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Blog />,
+  },
+  {
+    path: '/signup',
+    element: <Signup />,
+  },
+])
 
 const router = createBrowserRouter([
   {
