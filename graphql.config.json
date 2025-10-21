@@ -1,0 +1,4 @@
+{ 
+    "schema": "https://special-train-7vvgj4vgvqwxfx9g7-3000.app.github.dev/graphql", 
+    "documents": "src/api/graphql/**/*.{js,jsx}" 
+} 
