@@ -9,14 +9,14 @@ input PostsOptions {
 sortBy: String 
 sortOrder: String 
 } 
-    type Query { 
-    test: String 
-    Posts(options: PostsOptions): [Post!]! 
-    postsByAuthor(username: String!, options: PostsOptions): [Post!]! 
-    postsByTag(tag: String!, options: PostsOptions): [Post!]! 
-    postById(id: ID!): Post 
-    } 
-    `
+type Query { 
+test: String 
+posts(options: PostsOptions): [Post!]! 
+postsByAuthor(username: String!, options: PostsOptions): [Post!]! 
+postsByTag(tag: String!, options: PostsOptions): [Post!]! 
+postById(id: ID!): Post 
+} 
+`
 export const queryResolver = {
   Query: {
     test: () => {
